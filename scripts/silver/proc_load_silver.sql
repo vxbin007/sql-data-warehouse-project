@@ -24,8 +24,8 @@ BEGIN
 
 -- ======================================= silver.customer =======================================
   
-	TRUNCATE TABLE					silver.customer;
-	INSERT INTO					silver.customer (
+	TRUNCATE TABLE	silver.customer;
+	INSERT INTO	silver.customer (
 		customer_id,
 		first_name,
 		last_name,
