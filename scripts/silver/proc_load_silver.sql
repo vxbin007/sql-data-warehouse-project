@@ -22,7 +22,7 @@ DELIMITER $$
 CREATE PROCEDURE silver.load_silver()
 BEGIN
 
--- ======================================= silver.customer =======================================
+
   
 	TRUNCATE TABLE	silver.customer;
 	INSERT INTO	silver.customer (
@@ -74,7 +74,7 @@ BEGIN
 	)t WHERE flag = 1;  
 
 
--- ======================================= silver.order_items =======================================
+
 
 	TRUNCATE TABLE	silver.order_items;
 	INSERT INTO	silver.order_items (
@@ -90,7 +90,8 @@ BEGIN
 		unit_price
 	FROM bronze.order_items;
 
--- ======================================= silver.order_notes =======================================
+
+
 
 	TRUNCATE TABLE	silver.order_notes;
 	INSERT INTO	silver.order_notes(
@@ -102,7 +103,8 @@ BEGIN
 	SELECT * FROM bronze.sql_store_order_item_notes;
 
 
--- ======================================= silver.order_statuses =======================================
+
+
 
 	TRUNCATE TABLE	silver.order_statuses;
 	INSERT INTO	silver.order_statuses(
@@ -112,7 +114,7 @@ BEGIN
 	SELECT * FROM bronze.sql_store_order_statuses;
 
 
--- ======================================= silver.orders ===============================================
+
 
 	TRUNCATE TABLE	silver.orders;
 	INSERT INTO 	silver.orders(
@@ -138,7 +140,6 @@ BEGIN
 	FROM bronze.orders;
 
 
--- ======================================= silver.products ===============================================
 
 
 	TRUNCATE TABLE  silver.products;
