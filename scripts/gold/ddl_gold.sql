@@ -16,7 +16,7 @@ Usage			: These views can be queried directly for analytics and reporting.
 DROP VIEW IF EXISTS 	gold.dim_customers;
 CREATE VIEW		gold.dim_customers AS 
 SELECT 
- 	 ROW_NUMBER() OVER (ORDER BY customer_id) AS customer_key,
+	ROW_NUMBER() OVER (ORDER BY customer_id) AS customer_key,
 	customer_id,
 	first_name, 	
 	last_name ,	
@@ -68,24 +68,24 @@ ON		o.shipper_id = s.shipper_id;
 
 
 
-DROP VIEW IF EXISTS gold.fact_order_items;
-CREATE VIEW 		    gold.fact_order_items  AS 
+DROP VIEW IF EXISTS	gold.fact_order_items;
+CREATE VIEW		gold.fact_order_items  AS 
 SELECT 
 	oi.order_id,
 	-- oi.product_id,
-  p.product_key,
+ 	p.product_key,
 	oi.quantity,
 	oi.unit_price,
 	oi.quantity * 
 	oi.unit_price as total_sales
-FROM		    silver.order_items oi
-LEFT JOIN	  gold.dim_products p
-ON			    oi.product_id = p.product_id
+FROM		silver.order_items oi
+LEFT JOIN	gold.dim_products p
+ON		oi.product_id = p.product_id
 
 
 
-DROP VIEW IF EXISTS gold.vw_order_detail_flat;
-CREATE VIEW 		    gold.vw_order_detail_flat  AS 
+DROP VIEW IF EXISTS	gold.vw_order_detail_flat;
+CREATE VIEW		gold.vw_order_detail_flat  AS 
 SELECT 
 	o.order_id,
 	o.customer_key,
@@ -93,13 +93,13 @@ SELECT
 	o.shipped_date,
 	o.status_name,
 	o.shipper_name,
-  p.product_name,
-  oi.quantity,
-  oi.unit_price,
-  oi.total_sales,
+  	p.product_name,
+	oi.quantity,
+  	oi.unit_price,
+  	oi.total_sales,
 	o.comments
-FROM		    gold.fact_orders o
+FROM		gold.fact_orders o
 LEFT JOIN 	gold.fact_order_items oi
-ON			    o.order_id = oi.order_id
+ON		o.order_id = oi.order_id
 LEFT JOIN  	gold.dim_products p
-ON			    oi.product_key = p.product_key
+ON		oi.product_key = p.product_key
