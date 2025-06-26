@@ -19,7 +19,7 @@ How to Run:
 
 DROP PROCEDURE IF EXISTS silver.load_silver;
 DELIMITER $$
-CREATE PROCEDURE silver.load_silver()
+CREATE PROCEDURE 	silver.load_silver()
 BEGIN
 
 
