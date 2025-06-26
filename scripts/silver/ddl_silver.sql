@@ -56,42 +56,42 @@ createDateDwh 	    	DATETIME DEFAULT CURRENT_TIMESTAMP
 
 
 DROP TABLE IF EXISTS 	silver.orders;
-CREATE TABLE		    	silver.orders (
-	order_id 			      int(11),
-	customer_id 		    int(11),
-	order_date 			    date,
-	shipped_date 		    date,
-	order_status		    tinyint(4),
-	shipper_id 			    smallint(6),
-	comments 			      varchar(50),
-  createDateDwh 	    DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE		silver.orders (
+order_id 		int(11),
+customer_id 		int(11),
+order_date 		date,
+shipped_date 		date,
+order_status		tinyint(4),
+shipper_id 		smallint(6),
+comments 		varchar(50),
+createDateDwh 	    	DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 
 
 DROP TABLE IF EXISTS 	silver.order_notes;
-CREATE TABLE 			    silver.order_notes(
-	note_id 		  	    INT NOT NULL,
-	order_id 			      INT NOT NULL,
-	product_id	  	    INT NOT NULL,
-	note				        VARCHAR(255) NOT NULL,
-  createDateDwh 	    DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE 		silver.order_notes(
+note_id 		INT NOT NULL,
+order_id 		INT NOT NULL,
+product_id	  	INT NOT NULL,
+note			VARCHAR(255) NOT NULL,
+createDateDwh 	   	 DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 
 
 DROP TABLE IF EXISTS 	silver.order_statuses;
-CREATE TABLE			    silver.order_statuses(
-	order_status_id 	  tinyint(4),
-	status_name			    varchar(50),
-  createDateDwh 		  DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE		silver.order_statuses(
+order_status_id 	tinyint(4),
+status_name		varchar(50),
+createDateDwh 		DATETIME DEFAULT CURRENT_TIMESTAMP
 );	
 
 
 
 DROP TABLE IF EXISTS 	silver.shippers;
-CREATE TABLE 			    silver.shippers ( 
-	shipper_id 			    smallint(6),
-	name 				        varchar(50),
-  createDateDwh 		  DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE 		silver.shippers ( 
+shipper_id 		smallint(6),
+name 			varchar(50),
+createDateDwh 		DATETIME DEFAULT CURRENT_TIMESTAMP
 );
