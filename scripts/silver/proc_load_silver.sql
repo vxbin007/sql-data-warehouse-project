@@ -190,8 +190,10 @@ BEGIN
 	 )t WHERE flag = 1;
 
 
+
+
 	TRUNCATE TABLE 	silver.shippers;
-	INSERT INTO 	  silver.shippers( 
+	INSERT INTO 	silver.shippers( 
 		shipper_id,
 		shipper_name
 	)
