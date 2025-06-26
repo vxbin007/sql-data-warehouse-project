@@ -54,6 +54,7 @@ CREATE TABLE 			    silver.order_items (
  );
 
 
+
 DROP TABLE IF EXISTS 	silver.orders;
 CREATE TABLE		    	silver.orders (
 	order_id 			      int(11),
@@ -77,12 +78,15 @@ CREATE TABLE 			    silver.order_notes(
   createDateDwh 	    DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+
+
 DROP TABLE IF EXISTS 	silver.order_statuses;
 CREATE TABLE			    silver.order_statuses(
 	order_status_id 	  tinyint(4),
 	status_name			    varchar(50),
   createDateDwh 		  DATETIME DEFAULT CURRENT_TIMESTAMP
 );	
+
 
 
 DROP TABLE IF EXISTS 	silver.shippers;
