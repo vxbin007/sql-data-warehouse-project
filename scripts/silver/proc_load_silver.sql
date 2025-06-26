@@ -1,8 +1,8 @@
 /*
 ===============================================================================================
 Stored Procedure	: silver.load_silver                                                       
-Purpose				    : This stored procedure handles the ETL process that loads cleaned and     
-					          transformed data from the Bronze layer into the Silver layer tables.     
+Purpose			: This stored procedure handles the ETL process that loads cleaned and     
+			  transformed data from the Bronze layer into the Silver layer tables.     
 																							   
 Description  :                                                                                 
     - Clears (truncates) data in Silver tables.                                                
@@ -143,12 +143,12 @@ BEGIN
 
 	TRUNCATE TABLE  silver.products;
 	INSERT INTO 	silver.products (
-	 product_id,
-	 product_name,
-	 product_key,
-	 product_cat,
-	 quantity_in_stock,
-	 unit_price
+	 	product_id,
+	 	product_name,
+	 	product_key,
+	 	product_cat,
+	 	quantity_in_stock,
+	 	unit_price
 	 )
 	 SELECT 
 		product_id,
