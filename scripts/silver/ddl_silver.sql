@@ -45,12 +45,12 @@ createDateDwh		datetime DEFAULT CURRENT_TIMESTAMP
 
 
 DROP TABLE IF EXISTS 	silver.order_items;
-CREATE TABLE 			    silver.order_items (
-	order_id 			      int(11),
-	product_id 			    int(11),
-	quantity			      int(11),
-	unit_price			    decimal(6,2),
-  createDateDwh 	    DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE 		silver.order_items (
+order_id 		int(11),
+product_id 		int(11),
+quantity		int(11),
+unit_price		decimal(6,2),
+createDateDwh 	    	DATETIME DEFAULT CURRENT_TIMESTAMP
  );
 
 
