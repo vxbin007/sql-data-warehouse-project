@@ -13,10 +13,10 @@ Usage			: These views can be queried directly for analytics and reporting.
 
 
 
-DROP VIEW IF EXISTS gold.dim_customers;
-CREATE VIEW 		    gold.dim_customers AS 
+DROP VIEW IF EXISTS 	gold.dim_customers;
+CREATE VIEW		gold.dim_customers AS 
 SELECT 
-  ROW_NUMBER() OVER (ORDER BY customer_id) AS customer_key,
+ 	 ROW_NUMBER() OVER (ORDER BY customer_id) AS customer_key,
 	customer_id,
 	first_name, 	
 	last_name ,	
@@ -30,8 +30,8 @@ FROM silver.customer;
 
 
 
-DROP VIEW IF EXISTS gold.dim_products;
-CREATE VIEW 		    gold.dim_products AS 
+DROP VIEW IF EXISTS	gold.dim_products;
+CREATE VIEW		gold.dim_products AS 
 SELECT 
 	ROW_NUMBER() OVER (ORDER BY product_id) AS product_key,
 	product_id,
@@ -44,8 +44,8 @@ FROM silver.products
 
 
 
-DROP VIEW IF EXISTS gold.fact_orders;
-CREATE VIEW 		    gold.fact_orders  AS 
+DROP VIEW IF EXISTS	gold.fact_orders;
+CREATE VIEW		gold.fact_orders  AS 
 SELECT 
 	o.order_id,
 	-- o.customer_id,
@@ -58,13 +58,13 @@ SELECT
 	-- o.shipper_id,
 	s.shipper_name,
 	o.comments
-FROM		    silver.orders o
-LEFT JOIN 	gold.dim_customers c
-ON 			    o.customer_id = c.customer_id
+FROM		silver.orders o
+LEFT JOIN	gold.dim_customers c
+ON		o.customer_id = c.customer_id
 LEFT JOIN 	silver.order_statuses os
-ON			    o.order_status = os.order_status_id
+ON		o.order_status = os.order_status_id
 LEFT JOIN 	shippers s
-ON 		    	o.shipper_id = s.shipper_id;
+ON		o.shipper_id = s.shipper_id;
 
 
 
