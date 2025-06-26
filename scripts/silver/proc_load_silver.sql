@@ -25,7 +25,7 @@ BEGIN
 -- ======================================= silver.customer =======================================
   
 	TRUNCATE TABLE					silver.customer;
-	INSERT INTO							silver.customer (
+	INSERT INTO					silver.customer (
 		customer_id,
 		first_name,
 		last_name,
@@ -77,7 +77,7 @@ BEGIN
 -- ======================================= silver.order_items =======================================
 
 	TRUNCATE TABLE	silver.order_items;
-	INSERT INTO		  silver.order_items (
+	INSERT INTO	silver.order_items (
 		order_id,
 		product_id,
 		quantity,
@@ -93,7 +93,7 @@ BEGIN
 -- ======================================= silver.order_notes =======================================
 
 	TRUNCATE TABLE	silver.order_notes;
-	INSERT INTO		  silver.order_notes(
+	INSERT INTO	silver.order_notes(
 		note_id,
 		order_id,
 		product_id,
@@ -105,7 +105,7 @@ BEGIN
 -- ======================================= silver.order_statuses =======================================
 
 	TRUNCATE TABLE	silver.order_statuses;
-	INSERT INTO		  silver.order_statuses(
+	INSERT INTO	silver.order_statuses(
 		order_status_id,
 		status_name	
 	)
@@ -115,7 +115,7 @@ BEGIN
 -- ======================================= silver.orders ===============================================
 
 	TRUNCATE TABLE	silver.orders;
-	INSERT INTO 	  silver.orders(
+	INSERT INTO 	silver.orders(
 		order_id,
 		customer_id,
 		order_date,
@@ -142,7 +142,7 @@ BEGIN
 
 
 	TRUNCATE TABLE  silver.products;
-	INSERT INTO 	  silver.products (
+	INSERT INTO 	silver.products (
 	 product_id,
 	 product_name,
 	 product_key,
