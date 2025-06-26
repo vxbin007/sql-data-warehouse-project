@@ -17,17 +17,17 @@ Description  :
 USE silver;
 
 DROP TABLE IF EXISTS 	silver.customer;
-CREATE TABLE 			    silver.customer (
-	customer_id 		    int(11),
-	first_name 			    varchar(50) NOT NULL,
-	last_name 			    varchar(50) NOT NULL,
-	birth_date 			    date NOT NULL,
-	phone 				      varchar(50) DEFAULT NULL,
-	address 		  	    varchar(50) NOT NULL,
-	city 				        varchar(50) NOT NULL,
-	state				        char(2) NOT NULL,
-	points 			  	    int(11) NOT NULL DEFAULT '0',
-	createDateDwh 	    DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE 		silver.customer (
+	customer_id 	int(11),
+	first_name 	varchar(50) NOT NULL,
+	last_name 	varchar(50) NOT NULL,
+	birth_date 	date NOT NULL,
+	phone 		varchar(50) DEFAULT NULL,
+	address 	varchar(50) NOT NULL,
+	city 		varchar(50) NOT NULL,
+	state		char(2) NOT NULL,
+	points 		int(11) NOT NULL DEFAULT '0',
+	createDateDwh 	DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 
@@ -38,7 +38,7 @@ CREATE TABLE			      silver.products (
   `product_name`	 	    varchar(50) DEFAULT NULL,
   `product_key` 		    varchar(50) DEFAULT NULL,
   `product_cat` 		    varchar(50) DEFAULT NULL,
-  `quantity_in_stock` 	int DEFAULT NULL,
+  `quantity_in_stock` 			int DEFAULT NULL,
   `unit_price` 			    decimal(4,2) DEFAULT NULL,
   `createDateDwh`		    datetime DEFAULT CURRENT_TIMESTAMP
 
