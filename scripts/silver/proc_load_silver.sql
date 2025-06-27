@@ -1,18 +1,16 @@
 /*
-===============================================================================================
+=============================================================================================================
 Stored Procedure	: silver.load_silver                                                       
 Purpose			: This stored procedure handles the ETL process that loads cleaned and     
 			  transformed data from the Bronze layer into the Silver layer tables.     
 																							   
-Description  :                                                                                 
-    - Clears (truncates) data in Silver tables.                                                
-    - Loads updated and cleaned data from Bronze tables.                                       
-    - Applies some transformations like trimming names, formatting phone numbers,              
-      generating product keys, and handling nulls or empty values.                             
-																							   
-How to Run:                                                                                    
-    CALL silver.load_silver();                                                                 
-===============================================================================================
+Description 	        : - Clears (truncates) data in Silver tables.                                                                                 
+                          - Loads updated and cleaned data from Bronze tables.                       
+                          - Applies some transformations like trimming names, formatting phone numbers,              
+                            generating product keys, and handling nulls or empty values.
+                                   																							   
+How to Run		: CALL silver.load_silver();    
+=============================================================================================================
 */
 	
 	
