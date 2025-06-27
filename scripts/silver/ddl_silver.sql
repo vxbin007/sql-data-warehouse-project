@@ -1,16 +1,14 @@
 /*
-==============================================================================
-DDL Script   : Create Silver Tables
-Purpose      : Defines structured staging tables in the 'silver' schema 
-               as part of the Silver Layer in the data pipeline.
+====================================================================================================================================
+DDL Script             :   Create Silver Tables
+Purpose                :   Defines structured staging tables in the 'silver' schema 
+                           as part of the Silver Layer in the data pipeline.
 
-Description  : 
-  - Drops and recreates cleaned and enriched tables based on raw data 
-    from the Bronze Layer.
-  - Adds standardized fields and formats, including audit column 
-    `createDateDwh` for data lineage.
-  - Supports downstream analytics and transformations in the Gold Layer.
-==============================================================================
+Description            : - Drops and recreates cleaned and enriched tables based on raw data 
+                           from the Bronze Layer.
+                         - Adds standardized fields and formats, including audit column `createDateDwh` for data lineage.
+                         - Supports downstream analytics and transformations in the Gold Layer.
+====================================================================================================================================
 */
 
 
