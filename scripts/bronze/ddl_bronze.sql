@@ -66,7 +66,7 @@ CREATE TABLE 		bronze.sql_store_order_item_notes(
 note_id 		INT NOT NULL,
 order_Id		INT NOT NULL,
 product_id		INT NOT NULL,
-note`			VARCHAR(255) NOT NULL
+note			VARCHAR(255) NOT NULL
 );
  
 
@@ -89,21 +89,15 @@ name 			varchar(50)
 
 
 /*
-------------------------------------------------------------
-Script Name  : Bronze Layer Ingestion Notes
+=============================================================================================================================================================
+DDL Script             : Bronze Layer Ingestion Notes
 
-Purpose      : Documents the ingestion method for loading raw data 
-               into the Bronze Layer of the data warehouse.
-
-Description  : 
-  - Data in the `bronze` schema is ingested from source CSV files 
-    or source systems using the **MySQL Table Data Import Wizard**.
-  - This process loads raw, unvalidated data into staging tables 
-    for further transformation in the Silver and Gold layers.
-  - No transformations, validations, or constraints are applied 
-    at this stage — the focus is on capturing data "as-is".
-
-Ingestion Tool: MySQL Workbench → Table Data Import Wizard
-
-------------------------------------------------------------
+Purpose                : Documents the ingestion method for loading raw data into the Bronze Layer of the data warehouse. 
+                         
+Description            : - Data in the `bronze` schema is ingested from source CSV files or source systems using the **MySQL Table Data Import Wizard**. 
+                         - This process loads raw, unvalidated data into staging tables for further transformation in the Silver and Gold layers.
+                         - No transformations, validations, or constraints are applied at this stage — the focus is on capturing data "as-is". 
+    
+Ingestion Tool         : MySQL Workbench → Table Data Import Wizard
+=============================================================================================================================================================
 */
