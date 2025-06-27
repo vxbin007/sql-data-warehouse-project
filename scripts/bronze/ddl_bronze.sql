@@ -1,6 +1,6 @@
 /*
 =======================================================================================================================================
-DDL Script	           : Create Bronze Tables
+DDL Script	     : Create Bronze Tables
 Purpose                 : Schema initialization script for the 'bronze' layer of a data warehouse / staging environment. This script
                           creates foundational raw data tables for customer,  order, and product data ingestion.
                                            
