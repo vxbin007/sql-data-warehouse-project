@@ -1,25 +1,13 @@
 /*
-==============================================================================
-DDL Script	: Create Bronze Tables
-Purpose         : Schema initialization script for the 'bronze' layer
-                  of a data warehouse / staging environment. This script 
-                  creates foundational raw data tables for customer, 
-                  order, and product data ingestion.
-
-Description    :
-    - Drops and recreates base tables under the `bronze` schema.
-    - Tables include: 
-        * customer
-        * mosh_products
-        * orders
-        * order_items
-        * sql_store_order_item_notes
-        * sql_store_order_statuses
-        * sql_store_shippers
-    - These tables represent raw ingestion points for data pipelines
-      and will typically be used as sources in subsequent ETL or ELT
-      processes.
-==============================================================================
+=======================================================================================================================================
+DDL Script	            : Create Bronze Tables
+Purpose                 : Schema initialization script for the 'bronze' layer of a data warehouse / staging environment. This script
+                          creates foundational raw data tables for customer,  order, and product data ingestion.
+                                           
+Description             : - Drops and recreates base tables under the `bronze` schema.
+                          - These tables represent raw ingestion points for data pipelines and will typically be used as sources in 
+                            subsequent ETL or ELT processes.
+========================================================================================================================================
 */
 
 
